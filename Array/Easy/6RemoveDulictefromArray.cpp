@@ -21,7 +21,7 @@ int ReMoveDupli(int arr[], int size)
         {
             arr[i + 1] = arr[j];
             i++;
-      print(arr,6);
+    //   print(arr,6);
 
         }
     }
