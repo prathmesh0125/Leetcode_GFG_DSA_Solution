@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-# include <unordered_map>
+#include <unordered_map>
 // brute force Time complexity O(n^3);
 // int MaxSubarrray(int arr[], int size, int key)
 // {
@@ -12,6 +12,7 @@ using namespace std;
 //             int sum = 0;
 //             for (int k = i; k <= j; k++)
 //             {
+
 //                 sum += arr[k];
 //             }
 //             if (sum == key)
@@ -41,19 +42,20 @@ using namespace std;
 
 // optimal  solution by using unordered_map with time copplexity O(nlogn)
 
-int MaxSubarrray(int arr[],int n ,int k){
-    unordered_map<int,int>mpp;
-    mpp[0]=1;
-    int presum=0;
-    int cnt=0;
-    for(int i=0;i<n;i++){
-        presum+=arr[i];
-        int remove=presum-k;
-        cnt+=mpp[remove];
-        mpp[presum]+=1;
+int MaxSubarrray(int arr[], int n, int k)
+{
+    unordered_map<int, int> mpp;
+    mpp[0] = 1;
+    int presum = 0;
+    int cnt = 0;
+    for (int i = 0; i < n; i++)
+    {
+        presum += arr[i];
+        int remove = presum - k;
+        cnt += mpp[remove];
+        mpp[presum] += 1;
     }
     return cnt;
-
 }
 int main()
 {

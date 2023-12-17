@@ -47,9 +47,10 @@ int sortzero(int arr[], int size)
 
 int main()
 {
-    int arr[7] = {1, 1, 1, 1, 0, 1, 0};
+    // int arr[7] = {1, 1, 1, 1, 0, 1, 0};
     // int arr[12] = {0, 1, 2, 0, 1, 2, 1, 2, 0, 0, 0, 1};
+    int arr[6]={1,0,1,0,1,0};
 
-    sortzero(arr, 7);
-    print(arr, 7);
+    sortzero(arr, 6);
+    print(arr, 6);
 }

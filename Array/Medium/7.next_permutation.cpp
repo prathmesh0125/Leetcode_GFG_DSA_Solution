@@ -1,15 +1,16 @@
 #include <bits/stdc++.h> 
+#include<algorithm>
 #include<iostream>
 
 
 using namespace std;
 
-int next_permu(int &arr[],int size){ 
-    next_permutation(arr.begin(),arr.end());
-    return arr;
+void next_permu(int arr[],int size){ 
+    cout<<next_permutation(arr,arr+size);
+    // return arr;
 }
 
 int main(){
     int arr[3]={3,1,2};
-    cout<<next_permu(arr,3);
+    next_permu(arr,3);
 }
