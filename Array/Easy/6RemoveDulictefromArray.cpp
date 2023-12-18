@@ -1,16 +1,17 @@
 #include <iostream>
 using namespace std;
 
-void print(int arr[],int size){
-    for(int i=0;i<size;i++){
-        cout<<arr[i]<<" ";
+void print(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
     }
-    cout<<endl;
+    cout << endl;
 }
 
 int ReMoveDupli(int arr[], int size)
 {
-
 
     // optimal approch
 
@@ -21,8 +22,6 @@ int ReMoveDupli(int arr[], int size)
         {
             arr[i + 1] = arr[j];
             i++;
-    //   print(arr,6);
-
         }
     }
     return i + 1;
@@ -31,7 +30,6 @@ int ReMoveDupli(int arr[], int size)
 int main()
 {
     int arr[6] = {1, 1, 2, 3, 3, 5};
-    
-     ReMoveDupli(arr, 6);
-      print(arr,6);
+    ReMoveDupli(arr, 6);
+    print(arr, 6);
 }
